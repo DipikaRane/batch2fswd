@@ -1,0 +1,26 @@
+.header{
+    height:100px;
+    width:100%;
+    background-color:cyan;
+    text-align: center;
+}
+.home-container{
+    /* text-align: center; */
+    color:rebeccapurple;
+}
+.card{
+    height:400px;
+    width:270px;
+    border-radius:8px;
+    margin:2%;
+    border:1px solid rebeccapurple;
+    display: inline-block;
+}
+.card-image{
+    height:270px;
+    width:270px;
+}
+.card-image>img{
+    height:100%;
+    width:100%;
+}

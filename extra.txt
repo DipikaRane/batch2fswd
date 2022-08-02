@@ -1,0 +1,132 @@
+Installing IDE
+>>1>> Visual Studio Code
+>>2>>Git bash
+>>3>>> Node.js https://nodejs.org/en/download/
+>>4>> MongoDB https://www.mongodb.com/try/download/community
+
+
+
+>>Git Bash
+>> only one time
+git clone https://github.com/DipikaRane/FSWD_Batch2.git
+go inside fswdsummerintern
+>>every time
+go inside FSWD_Batch2
+git pull
+
+
+>>When you craete a repository
+>>first time
+1. go to destination folder
+2. git Bash
+3. write git init
+4. git add .
+5. git commit -m "any message"
+6. git remote add origin "https://github.com/DipikaRane/FSWD_Batch2.git"
+7. git push -u origin master
+
+
+>>every time do this
+git add .
+git commit -m "changes"
+git push -u origin main/master
+
+
+>>>HTML>>
+block-level elements <p></p>, <div></div>,<h1></h1>...<h6></h6>
+inline elements <span></span>, <image></image> ,<iframe></iframe>, <input>
+
+>>>CSS>>>>
+Selectors --- Id, class, element/tag
+
+>>>Bootstrap>>>>
+used for making website/webpage responsive
+Bootstrap 3
+>>>
+Bootstrap 3 grid classes :
+col-xs < 768px – for phone screen
+sm > 768px – for tablet screen
+md > 992px – for small laptops screen
+lg > 1200px – for laptops and desktops screen
+>>>
+Bootstrap 4
+col-xs <576px
+col-sm >576px
+col-md > 768px
+col-lg >992px
+col-xl >1200px
+
+Bootstrap 5
+xs < 576px
+sm > 576px
+md > 768px
+lg > 992px
+xl > 1200px
+xxl> 1400px
+
+Add/Install extensions
+>> Tabnine
+>>Auto Close Tag
+>>Git lense
+>>EsLint
+
+imgBB for making image url
+https://imgbb.com/
+
+
+some method>>>>>>>>
+GET
+POST
+DELETE
+UPDATE
+PUT
+
+>>>making url/api live
+1. create one folder having app.js, package.json, package-lock.json
+2. make sure mongoURL must be Live
+3 create one repository, initalize it.. push your code to the repository.
+4. go to heroku.com
+https://id.heroku.com/login
+
+
+>>>>>React framework>>>>>
+1. node must be installed in system
+2. to install react >>>
+## 1. npm create-react-app
+## 2. npx create-react-app app_name
+
+###to start react-app
+npm start or yarn start
+
+default port of react
+http://localhost:3000/
+
+three things 
+1. react - this is the main package
+2. react-dom -: this package  helps to build JS with html
+3. react-scripts  -: this helps to run the application
+
+>>>React Component>>>
+1. function component -- dumb component used only for display purposes
+2. class component -- logical component, can call the API.
+3. hooks component -- used in both class and function component.
+
+##state & props##
+
+state -- state acts local component
+        every component have its own state
+        scope of state is single component
+        we can update the value of state i.e mutable.
+
+props -- helps to transfer the data between components
+        we can transfer the data between nested components
+        we cannot change the value of props (directly) i.e immutable
+
+### constructor###
+-- its a keywords
+-- first thing that get called inside class
+
+### Routing###
+needs react-router to be installed 
+install latest version
+npm i react-router-dom@5.3.0
