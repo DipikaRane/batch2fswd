@@ -1,12 +1,16 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-//import Home from '../Product/Home_bk';
+import Header from '../Header';
+import Search from './Search';
+import QuickSearch from './QuickSearch'
 const HomePage=()=>{
     return(
+        <>
+        <Header/>
         <div>
-            <h1>This is Zomato HomePage</h1>
-            <Link to="/product">HomePage</Link>
+            <Search/>
+            <QuickSearch/>
         </div>
+        </>
     )
 }
 export default HomePage
