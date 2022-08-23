@@ -1,15 +1,15 @@
 import React from 'react';
-import {BrowserRouter,Routes,Route} from 'react-router-dom';
-import HomePage from './Home/HomePage';
+import {BrowserRouter,Route} from 'react-router-dom';
+import HomePage from './Component/Home/HomePage';
 //import Home from './Product/Home_bk';
+import Listing from "./Component/Listing/Listing";
 
 function Routing(){
     return(
-        <BrowserRouter>
-            <Routes>
-                <Route path='/' element={<HomePage/>}/>
+        <BrowserRouter>          
+            <Route exact path="/" component={HomePage}></Route>
+            <Route path="/list/:id" component={Listing}/>
                 {/* <Route path='/product' element={<Home/>}/> */}
-            </Routes>
         </BrowserRouter>
     )
 }

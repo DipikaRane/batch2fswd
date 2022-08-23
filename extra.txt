@@ -130,3 +130,6 @@ props -- helps to transfer the data between components
 needs react-router to be installed 
 install latest version
 npm i react-router-dom@5.3.0
+
+for axios
+npm i axios

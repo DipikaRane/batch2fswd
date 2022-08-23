@@ -1,21 +1,23 @@
 import React from 'react';
-import './search.css'
+import './search.css';
+import {Link} from 'react-router-dom';
 
 const QuickDisplay=(props)=>{
     const renderMeal=({mealtype})=>{
         if(mealtype){
             return mealtype.map((item)=>{
                 return(
-                    <div key={item.mealtype_id} style={{display:'inline-block'}}>
+                    <Link to={`/list/${item.mealtype_id}`} key={item.mealtype_id} style={{display:'inline-block'}}>                   
                         <div className="tilecomponent">
                             <div className="imgdiv">
                                 <img src={item.meal_image} alt="img"/>
                             </div>
                             <div className="title">
-                                <h3>{item.mealtype}</h3>
+                                <h3 style={{fontSize:'2rem'}}>{item.mealtype}</h3>
+                                <center><p style={{fontSize:'15px',color:'white'}}>{item.content}</p></center>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 )
             })
         }

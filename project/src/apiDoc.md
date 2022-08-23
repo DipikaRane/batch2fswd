@@ -23,9 +23,11 @@ https://nodezomobatch2.herokuapp.com/restaurants?state=
 listing page apis
 get the menus in bulk/array
 http://localhost:8520/menus
+https://nodezomobatch2.herokuapp.com/menus
 
 get the restaurants wrt mealtype_id and cuisine_id
 http://localhost:8520/filter/1?cuisines=2
+https://nodezomobatch2.herokuapp.com/filter/1?cuisines=2
 
 get the restaurants wrt mealtype_id and cuisine_id and with lcost and hcost and sorting restaurants
 http://localhost:8520/filter/1?cuisines=2&&locst=300&&hcost=700
