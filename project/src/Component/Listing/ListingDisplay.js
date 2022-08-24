@@ -1,9 +1,11 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './Listing.css'
 
 const ListingDisplay=(props)=>{
     const renderData=({restData})=>{
-        if(restData){           
+        if(restData){  
+            if(restData.length>0){
                 return restData.map((item)=>{
                     return(
                         <div className="content">
@@ -11,7 +13,7 @@ const ListingDisplay=(props)=>{
                                 <img src={item.restaurant_thumb} alt="" />      
                             </div>
                             <div className="tilecomponent3">
-                                <button className="btn btn-proceed">Proceed</button>
+                            <Link to={`/details/${item.restaurant_id}/`}><button className="btn btn-proceed">Proceed</button></Link>
                             </div>
                             <div className="tilecomponent2">
                                 <h4>{item.restaurant_name}</h4>
@@ -30,7 +32,13 @@ const ListingDisplay=(props)=>{
                         </div>                                   
                          )
                 })
-            
+            }else{
+                return(
+                    <div>
+                        <h2>No Restaurants Available</h2>
+                    </div>
+                )
+            }           
         }else{
             return(
                 <div>

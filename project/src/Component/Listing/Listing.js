@@ -3,6 +3,8 @@ import './Listing.css';
 import axios from 'axios';
 import ListingDisplay from './ListingDisplay';
 import CuisineFilter from '../Filter/CuisineFilter';
+import CostFilter from '../Filter/CostFilter';
+import SortFilter from '../Filter/SortFilter';
 
 const resturl="https://nodezomobatch2.herokuapp.com/filter";
 
@@ -24,6 +26,8 @@ class Listing extends Component {
                         <hr/>
                         <CuisineFilter mealId={this.props.match.params.id}
                         restPerCuisine={(data)=>{this.setDataPerFilter(data)}}/>
+                        <CostFilter restPerCost={(data)=>{this.setDataPerFilter(data)}}/>
+                        <SortFilter restPerCost={(data)=>{this.setDataPerFilter(data)}}/>
                 </div>
              <div id="searchresult">
                  <ListingDisplay restData={this.state.restList}/>
@@ -33,7 +37,7 @@ class Listing extends Component {
     }   
     componentDidMount(){
         const mealId = this.props.match.params.id;
-        //sessionStorage.setItem('mealId',mealId)
+        sessionStorage.setItem('mealId',mealId)
         axios.get(`${resturl}/${mealId}`)
         .then((res) => {
             this.setState({restList:res.data})

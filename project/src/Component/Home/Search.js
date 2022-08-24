@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
-import './search.css'
+import './search.css';
+//import {Link} from 'react-router-dom';
 
 const locUrl="https://nodezomobatch2.herokuapp.com/location";
 const restName="https://nodezomobatch2.herokuapp.com/restaurants?state=";
