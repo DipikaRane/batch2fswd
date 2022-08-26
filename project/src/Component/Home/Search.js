@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import './search.css';
-//import {Link} from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 
 const locUrl="https://nodezomobatch2.herokuapp.com/location";
 const restName="https://nodezomobatch2.herokuapp.com/restaurants?state=";
@@ -43,6 +43,10 @@ class Search extends Component{
             })
         }
     }
+    handleDetails=(event)=>{
+        console.log('inside details',this.props)
+        this.props.history.push(`/details/${event.target.value}`)
+    }
     render(){
         return(
             <>
@@ -58,7 +62,7 @@ class Search extends Component{
                     {this.renderState(this.state.location)}
                     
                 </select>
-                <select className="cities">
+                <select className="cities" onChange={this.handleDetails}>
                     <option>----Select Hotel----</option>
                     {this.renderRest(this.state.restName)}
                 </select>
@@ -70,11 +74,15 @@ class Search extends Component{
 
     componentDidMount(){
         console.log('>>Inside component')
+        try{
         fetch(locUrl,{method:'GET'})
         .then((res)=>res.json())
         .then((data)=>{
             this.setState({location:data})
-        })
+        })}
+        catch{
+            console.log("Network Error")
+        }
     }
 }
-export default Search
+export default withRouter(Search);

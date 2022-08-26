@@ -5,7 +5,7 @@ import ListingDisplay from './ListingDisplay';
 import CuisineFilter from '../Filter/CuisineFilter';
 import CostFilter from '../Filter/CostFilter';
 import SortFilter from '../Filter/SortFilter';
-
+import Header from "../../Header";
 const resturl="https://nodezomobatch2.herokuapp.com/filter";
 
 class Listing extends Component {
@@ -20,6 +20,8 @@ class Listing extends Component {
     }
     render(){
         return(
+            <>
+            <Header/>
             <div id="maincontent">
                 <div id="filter">
                         <center><h3>Filter</h3></center>
@@ -33,6 +35,7 @@ class Listing extends Component {
                  <ListingDisplay restData={this.state.restList}/>
              </div>
             </div>
+            </>
         )
     }   
     componentDidMount(){

@@ -7,12 +7,12 @@ export default function Header(){
         <>
         <nav className="navbar navbar-inverse">
             <div className="container-fluid">
-              <div className="navbar-header">
+              {/* <div className="navbar-header">
                 <Link to="/"><span style={{color:'white'}}>SwiggyFood</span></Link>
-              </div>
+              </div> */}
               <ul className="nav navbar-nav">
-                <li className="active"><Link to="">Home</Link></li>
-                <li>Page 1</li>
+                <li className="active"><Link to="/">Home</Link></li>
+                {/* <li>Page 1</li> */}
                 
               </ul>
               <ul className="nav navbar-nav navbar-right">

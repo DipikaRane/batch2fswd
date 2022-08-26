@@ -13,6 +13,7 @@ http://localhost:8520/mealtype/2 --- mealtypedata with mealtype_id
 
 http://localhost:8520/restmenu  ---restuarantMenu 
 http://localhost:8520/restmenu/4  ---restuarantMenu with menu_id
+https://nodezomobatch2.herokuapp.com/restmenu
 
 restaurants with respect to state_id
 http://localhost:8520/restaurants?state=state_id
